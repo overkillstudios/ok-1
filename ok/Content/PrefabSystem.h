@@ -1,21 +1,20 @@
 #pragma once
-#include "OK/Interface/IContentSystem.h"
-#include "OK/Type/ID.h"
-#include "OK/Type/Prefab.h"
+#include "ok/Interface/IContentSystem.h"
+#include "ok/Type/ID.h"
+#include "ok/Type/Prefab.h"
+using oPrefabSystem = ok::Content::PrefabSystem;
 
-namespace OK::Content 
+namespace ok::Content
 {
-using namespace OK::Type;
-using namespace OK::Interface;
 
-class PrefabSystem : public OK::IContentSystem<PrefabSystem>
+class PrefabSystem : public oIContentSystem<oPrefab>
 {
 public:
-    virtual OK::Prefab
-    GetById(const OK::ID id) final override;
+    oPrefab
+    GetById(const oID id) final;
     
-    virtual OK::Prefab&
-    GetRefById(const OK::ID id) final override; 
+    oPrefab&
+    GetRefById(const oID id) final; 
 
 private:
 

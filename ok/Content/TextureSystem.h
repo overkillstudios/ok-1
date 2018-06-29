@@ -1,21 +1,20 @@
 #pragma once
-#include "OK/Interface/IContentSystem.h"
-#include "OK/Type/ID.h"
-#include "OK/Type/Texture.h"
+#include "ok/Interface/IContentSystem.h"
+#include "ok/Type/ID.h"
+#include "ok/Type/Texture.h"
+using oTextureSystem = ok::Content::TextureSystem;
 
-namespace OK::Content 
+namespace ok::Content 
 {
-using namespace OK::Type;
-using namespace OK::Interface;
 
-class TextureSystem : public OK::IContentSystem<TextureSystem>
+class TextureSystem : public oIContentSystem<oTexture>
 {
 public:
-    virtual OK::Texture
-    GetById(const OK::ID id) final override;
+    oTexture
+    GetById(const oID id) final;
     
-    virtual OK::Texture&
-    GetRefById(const OK::ID id) final override; 
+    oTexture&
+    GetRefById(const oID id) final; 
 
 private:
 

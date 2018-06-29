@@ -2,6 +2,7 @@
 #include "ok/Interface/IContentSystem.h"
 #include "ok/Type/ID.h"
 #include "ok/Type/Material.h"
+using oMaterialSystem = ok::Content::MaterialSystem;
 
 
 namespace ok::Content 
@@ -10,15 +11,14 @@ namespace ok::Content
 class MaterialSystem : public oIContentSystem<oMaterial>
 {
 public:
-    virtual oMaterial
-    GetById(const oID id) final override;
+    oMaterial
+    GetById(const oID id) final;
     
-    virtual oMaterial&
-    GetRefById(const oID id) final override; 
+    oMaterial&
+    GetRefById(const oID id) final; 
 
 private:
 
 };
 
 }
-using oMaterialSystem = ok::Content::MaterialSystem;

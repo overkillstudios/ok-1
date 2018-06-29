@@ -1,21 +1,20 @@
 #pragma once
-#include "OK/Interface/IContentSystem.h"
-#include "OK/Type/ID.h"
-#include "OK/Type/Shader.h"
+#include "ok/Interface/IContentSystem.h"
+#include "ok/Type/ID.h"
+#include "ok/Type/Shader.h"
+using oShaderSystem = ok::Content::ShaderSystem;
 
-namespace OK::Content 
+namespace ok::Content 
 {
-using namespace OK::Type;
-using namespace OK::Interface;
 
-class ShaderSystem : public OK::IContentSystem<ShaderSystem>
+class ShaderSystem : public oIContentSystem<oShader>
 {
 public:
-    virtual OK::Shader
-    GetById(const OK::ID id) final override;
+    oShader
+    GetById(const oID id) final;
     
-    virtual OK::Shader&
-    GetRefById(const OK::ID id) final override; 
+    oShader&
+    GetRefById(const oID id) final; 
 
 private:
 
