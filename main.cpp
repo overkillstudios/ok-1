@@ -4,7 +4,7 @@
 #include "ok/Engine.h"
 
 
-oInt64 main(oInt64 argc, const char* argv[]) 
+int main(int argc, const char* argv[]) 
 {
     oEngine engine;
     oError  err;
@@ -15,5 +15,6 @@ oInt64 main(oInt64 argc, const char* argv[])
     err = engine.Go();
     if (err) return err;
 
+    engine.Stop();
     return 0;
 }

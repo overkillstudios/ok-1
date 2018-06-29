@@ -3,7 +3,6 @@
 
 namespace ok::Interface 
 {
-
 template<class T>
 class IContentSystem 
 {
@@ -17,5 +16,4 @@ public:
 }
 
 template<class T>
-using oIContentSystem = class IContentSystem<T>;
-
+using oIContentSystem = ok::Interface::IContentSystem<T>;

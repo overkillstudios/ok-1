@@ -1,4 +1,5 @@
 #pragma once
+using oModel = ok::Type::Model;
 
 namespace ok::Type 
 {
@@ -7,4 +8,3 @@ struct Model
 
 };
 }
-using oModel = ok::Type::Model;

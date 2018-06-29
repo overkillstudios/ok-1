@@ -1,7 +1,8 @@
 #pragma once
-#include "OK/Type/Error.h"
+#include "ok/Type/Error.h"
+using oEngine = ok::Engine;
 
-namespace ok 
+namespace ok
 {
 
 class Engine
@@ -16,9 +17,10 @@ public:
     oError 
     GoUntilExitOrError();
 
+    void
+    Stop();
 
 private:
 };
 
 }
-using oEngine = ok::Engine;

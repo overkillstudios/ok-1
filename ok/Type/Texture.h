@@ -1,4 +1,5 @@
 #pragma once
+using oTexture = ok::Type::Texture;
 
 namespace ok::Type 
 {
@@ -7,4 +8,3 @@ struct Texture
 
 };
 }
-using oTexture = ok::Type::Texture;
