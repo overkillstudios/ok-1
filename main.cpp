@@ -1,10 +1,10 @@
-#include "ok/Type/Error.h"
-#include "ok/Type/Int.h"
-#include "ok/Type/Float.h"
-#include "ok/Engine.h"
+#include "Type/Error.h"
+#include "Type/Int.h"
+#include "Type/Float.h"
+#include "Core/Engine.h"
 
 
-int main(int argc, const char* argv[]) 
+int main(int inArgc, const char* inArgv[]) 
 {
     oEngine engine;
     oError  err;
